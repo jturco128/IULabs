@@ -1,0 +1,77 @@
+
+.hour
+{
+	background: #ffe;
+	color: #c66;
+	padding: 0 10px 0 0;
+	text-align: right;
+	vertical-align: middle;
+	width: 65px;
+	border-left:0 solid black;
+}
+
+.odd
+{
+	background: #f2f2f2;
+}
+
+
+table
+{
+	
+	margin: 0 auto;
+}
+
+.blank {border-left:0 solid black;}
+
+td
+{
+	border-style: solid;
+	border-width: 0 0 1px 1px;
+	padding: 5px;
+	vertical-align: top;
+	width: 100px;
+}
+
+td p 
+{
+    line-height:13px !important;
+    margin:0 !important;
+    padding:5px 0 0 !important;
+}
+
+td a
+{
+	color: #33f;
+}
+
+td a:hover
+{
+	text-decoration: underline;
+}
+
+th
+{
+	background: #ffe;
+	border-style: solid;
+	border-width: 0 0 1px 1px;
+	color: #933;
+	font-size: 11px;
+	font-weight: normal;
+	letter-spacing: 2px;
+	line-height: 25px;
+	text-transform: uppercase;
+}
+
+tr:hover td,
+tr:hover td.Sun,
+tr:hover td.Mon,
+tr:hover td.Tue,
+tr:hover td.Wed,
+tr:hover td.Thu,
+tr:hover td.Fri,
+tr:hover td.Sat
+{
+	background: #ff9;
+	color: #000;
+}

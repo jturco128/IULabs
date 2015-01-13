@@ -1,0 +1,189 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="support_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Intra University Computer Labs - Colorado State University</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/Slider.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="support/js/jquery.js"></script>
+<script type="text/javascript" src="support/js/easySlider1.5.js"></script>
+<script type="text/javascript" charset="utf-8">
+// <![CDATA[
+$(document).ready(function(){	
+	$("#slider").easySlider({
+		controlsBefore:	'<p id="controls">',
+		controlsAfter:	'</p>',
+		auto: true, 
+		continuous: true
+	});
+	$(".addlog").hide();
+	$(".addlink").click(function() { $(".addlog").slideToggle(600); } );
+});
+// ]]>
+</script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div class="main">
+  <div class="blok_header">
+    <div class="header">
+      <div class="logo"><h1><a href="/">Intra-University Labs</a></h1></div>
+      <div class="menu">
+        <a href="http://www.colostate.edu"><img src="support/images/logo-linear.gif" alt="Colorado State University" /></a>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <div class="clr"></div>
+  <div class="header_text_bg">
+    <div class="header_text">
+      <div class="div">
+        <div class="left1">
+          <h2>Welcome</h2>
+          <p><%=DateTime.Now.ToLongDateString() %></p>
+        </div>
+      </div>
+      <div class="gallery">
+        <div id="slider">
+          <ul>
+            <li><img src="support/images/slider_img_1.jpg" alt="screen 1" width="263" height="165" border="0"  /></li>
+            <li><img src="support/images/slider_img_2.jpg" alt="screen 1" width="263" height="165" border="0"  /></li>
+            <li><img src="support/images/slider_img_3.jpg" alt="screen 1" width="263" height="165" border="0"  /></li>
+            <li><img src="support/images/slider_img_4.jpg" alt="screen 1" width="263" height="165" border="0"  /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="clr"></div>
+  <div class="body">
+    <div class="body_resize">
+      <div class="side_left">
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    </div>
+      <div class="side_right">
+        <div class="right">
+          <div class="right_top">
+          <div class="right_bottom">
+            <h2>More Info</h2>
+            <img src="support/images/img_5.jpg" alt="picture" width="42" height="42" />
+            <p><strong><a href="AssistTech.aspx" class="normal">Assistive Technology</a></strong></p>
+            <p>Both labs offer a range of computer services for any student with special needs.</p>
+            <div class="bg"></div>
+            <img src="support/images/img_3.jpg" alt="picture" width="42" height="42" />
+            <p><strong><a href="Software.aspx" class="normal">Software</a></strong></p>
+            <p>There is a wide range of software on the machines for students.</p>
+            <div class="bg"></div>
+            <img src="support/images/img_4.jpg" alt="picture" width="42" height="42" />
+            <p><strong><a href="Equipment.aspx" class="normal">Equipment Checkout</a></strong></p>
+            <p>Students can checkout laptop computers and headphones.</p>
+            <div class="bg"></div>
+            <img src="support/images/img_2.jpg" alt="picture" width="42" height="42" />
+            <p><strong><a href="Contact.aspx" class="normal">Contact</a></strong></p>
+            <p>If you have any questions, comments or concerns about the labs.</p>
+            <div class="clr"></div>
+          </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="right_top">
+          <div class="right_bottom">
+            <h2>Links</h2>
+    
+            <p><strong><a href="http://ramweb.colostate.edu" class="large">RAMWeb</a></strong></p>
+            <p>RAMweb provides online access to application status, registration, financial information, personal records, jobs, and more for applicants, new, and current students.</p>
+            <div class="bg"></div>
+            <p><strong><a href="http://ramct.colostate.edu" class="large">RAMCT</a></strong></p>
+            <p>Web-based course-management system designed to allow students and faculty to participate in classes delivered online or use online materials and activities to complement face-to-face teaching.</p>
+            <div class="bg"></div>
+            <p><strong><a href="http://mail.rams.colostate.edu" class="large">Google Apps</a></strong></p>
+            <p>Google Apps for CSU is a set of communication tools that includes email, a personal website, chat and allows the ability to create and share documents, spreadsheets, presentations and calendars in a collaborative fashion.</p>
+            
+            <div class="clr"></div>
+          </div>
+          </div>
+        </div>
+        <%--<div class="right">
+          <div class="right_top">
+          <div class="right_bottom">
+            <h2>Search Site</h2>
+            <div class="search">
+              <form id="form2" name="form1" method="post" action="">
+                <label>
+                  <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." />
+                  <input name="b" type="image" src="support/images/search.gif" class="button" />
+                </label>
+              </form>
+            </div>
+            <div class="clr"></div>
+          </div>
+          </div>
+        </div>--%>
+        <div class="right">
+          <div class="right_top">
+          <div class="right_bottom">
+            <h2>Get in touch!</h2>
+              <p>
+                <strong>BSB Laptop Checkout</strong><br />
+                130 BSB<br />
+                Fort Collins, CO<br />
+                80523-1032<br />
+                Email is the best way to get in touch: 
+              <br />
+              <a href="casa_laptop_checkout@mail.colostate.edu">casa_laptop_checkout@mail.colostate.edu</a></p>
+              <p>
+                  &nbsp;</p>
+              <p>
+                  There are no longer labs in the Lory Student Center or the Durrell Center.&nbsp; Please come by and say &quot;Hi&quot; to us in the BSB!
+
+                  </p>
+            <div class="clr"></div>
+          </div>
+          </div>
+        </div>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="clr"></div>
+</div>
+<div class="footer">
+  <div class="footer_resize">
+    <p class="leftt">&copy; <%=DateTime.Now.Year %> Colorado State University</p>
+    <p class="rightt">
+            <a href="http://search.colostate.edu/index.asp">Search CSU</a> | 
+            <a href="http://www.colostate.edu/info-disclaimer.aspx">Disclaimer</a> | 
+            <a href="http://www.colostate.edu/info-privacy.aspx">Privacy Policy</a> | 
+            <a href="http://www.colostate.edu/info-equalop.aspx">Equal Opportunity</a> | 
+            <a href="http://www.mediarelations.colostate.edu/staff.aspx">Contact Us</a> | 
+         <% if (Auth.IsUserLoggedIn())
+            {
+        %>
+            <a href="Logout.aspx">Log Out</a>
+            <% }
+            else
+            { %>
+            <a href="Admin.aspx">Log In</a>
+            <% } %>
+     </p>
+    <div class="clr"></div>
+  </div>
+  <div class="clr"></div>
+</div>
+</body>
+</html>
+        

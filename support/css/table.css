@@ -1,0 +1,85 @@
+table {
+	width:90%;
+	border-top:1px solid #004c7c;
+	border-right:1px solid #004c7c;
+	margin:1em auto;
+	border-collapse:collapse;
+	line-height: 1.5em;
+	}
+table .subtable 
+{
+    width:100%;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    border-bottom:none;
+    border-right:none;
+    }
+
+caption {
+	color: #082c4a;
+	font-size:1.4em;
+	line-height: 1.4em;
+	margin: 0 auto ;
+	padding: 7px 0 7px 0;
+	caption-side:top;
+	text-align:center;
+	}	
+tr td {
+	background: #fff;
+	}
+tr.odd td	{
+	background:#f2f2f2;
+	}
+td {
+	color:#678197;
+	border-bottom:1px solid #004c7c;
+	border-left:1px solid #004c7c;
+	padding:.2em .3em;
+	text-align:center;
+	}
+td .subtable{
+    padding:0 0 0 0;
+    margin:0 0 0 0;    
+}	
+th 
+{
+    background:#416958;
+	font-weight:normal;
+	color: #fff;
+	text-align:center;
+	border-bottom: 1px solid #004c7c;
+	border-left:1px solid #004c7c;
+	padding:.3em 1em;
+	}
+tbody tr th a
+{
+    color:#fff !important;
+    background:none !important;
+}	
+td.left, th.left{
+	text-align: left;
+	padding: .2em 1em;
+	}						
+thead th {
+	background:#ddd;
+	text-align:center;
+	font:bold 1.2em/1.2em "Trebuchet MS",Arial,Helvetica,sans-serif;
+	color:#082c4a;
+	}
+	
+/*table a {
+	color: #678197;
+	text-decoration: none;
+}
+table a:hover {
+	text-decoration: underline;
+	color: #3d5c76;
+}*/
+
+table.plain, table.plain caption, table.plain tr td, table.plain tr.odd, table.plain td, table.plain th, table.plain td.left, table.plain th.left, table.plain thead th {border: none; background: none; text-align:center; color: #003300}
+
+table.plain td.right {text-align: right;}
+
+
+
+
